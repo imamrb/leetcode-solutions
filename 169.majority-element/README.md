@@ -1,0 +1,30 @@
+<b> Title :</b> Majority Element<br> 
+<b> Url :</b> https://leetcode.com/problems/majority-element<br> 
+<b> Topic Tags :</b> #array, #hash-table, #divide-and-conquer, #sorting, #counting<br> 
+<b> Difficulty :</b> Easy<br> 
+
+<br><p>Given an array <code>nums</code> of size <code>n</code>, return <em>the majority element</em>.</p>
+
+<p>The majority element is the element that appears more than <code>&lfloor;n / 2&rfloor;</code> times. You may assume that the majority element always exists in the array.</p>
+
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [3,2,3]
+<strong>Output:</strong> 3
+</pre><p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [2,2,1,1,1,2,2]
+<strong>Output:</strong> 2
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>n == nums.length</code></li>
+	<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>
+	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?<br> 
+<b> Stats :</b> TOTALACCEPTED: 1.4M, TOTALSUBMISSION: 2.1M, ACRATE: 63.5%<br> 
+<b> Likes :</b> 11197
