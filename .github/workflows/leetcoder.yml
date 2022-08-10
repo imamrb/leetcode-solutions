@@ -1,0 +1,34 @@
+name: leetcoder auto download
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  leetcoder-download:
+    runs-on: ubuntu-latest
+    env:
+      LEETCODE_COOKIE: ${{ secrets.LEETCODE_COOKIE }}
+      DOWNLOAD_FOLDER: './'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.1
+
+      - name: Install leetcoder
+        run: gem install leetcoder
+
+      - name: Download Submissions
+        run: leetcoder -d all -f $DOWNLOAD_FOLDER
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'leetcoder: updated leetcode submissions'
+          commit_user_email: leetcoder+github-actions[leetcoder]@users.noreply.github.com
+          commit_author:  Imam Hossain <imam.swe@gmail.com>
